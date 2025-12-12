@@ -1,65 +1,66 @@
-print("Tuplas".center(20,"-"))
-# A diferencia de una lista, esta NO se puede cambiar 
-y = [1,2,3,4]
-x = tuple(y)
-print(x,y)
+print("Data Structures - Dictionaries".center(50,"-"))
+print("="*60)
+print("Un diccionario es una estructura llave-valor\n " \
+    "Similar a una lista. Donde se acceden a los elementos\n" \
+    "con un par de []. Puede almacenar todo tipo de datos\n" \
+    "y resulta bastante sencilla de manipular. Se declara con \n" \
+    "un par de {}. Cada llave y valor esta separada por :")
+print("="*60)
 
-# El metodo count cuenta numeros o caracteres
-text = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que viva un hidalgo de los de lanza en astillero, adarga antigua, rocn flaco y galgo corredor"
-print(text.count("e"))
+# Declaración de un diccionario - Por clave
+items_to_prices = {"cheese": 2.53, "milk": 3.40, "frozen pizza": 8.01}
+print(items_to_prices["frozen pizza"])
 
-# Slicing en texto
-#       inicio|fin
-print(text[0:41])
-#    inicio|fin|step
-print(text[0:41:2])
+# Declaración de un diccionario - Por valor
+point_to_region = {(0.1, 2.2, 3):False, (-10., 0, 4.5):True, (4.3, 1.0, 9.5):False}
+print(point_to_region[(-10., 0, 4.5)])
 
-print(text[:])
-
-# Recorre todo el texto en saltos de 2
-print(text[::2])
-
-# Recorre todo el texto en saltos de 2 de atras hacia adelante 
-print(text[::-2])
-
-first_item = None
-
-print("Operadores".center(20,"-"))
-y = [1,2,3,4,5,6]
-x = [1,2,3,4,5,6]
-print(5 in y)
-
-print(x is y)
-print(x is not y)
-print(x == y)
+# Por medio de un ciclo para asignar clave, valor
+print({k:v for k,v in [("apple", "fruit"), ("carrot", "vegetable")]})
 
 
+brainrotdic = {"tralalelotralala" : "god", "Tung tung tung sahur" : "god", "vaca saturno saturnita" : "legendary"}
+print(len(brainrotdic))
+print(brainrotdic["tralalelotralala"])
+brainrotdic["Boneca Ambalabu"] = "mid"
+print(brainrotdic)
 
-print("Bucle For".center(20, "-"))
+# La función update te permite agregar más elementos 
+brainrotdic.update([("Capuchino Asessino", "god"),("Orcalero orcala","mid")])
+print(brainrotdic)
 
-# Una forma chistosa para ir iterando puede ser con next. Que te permite hacer "peticiones" al ciclo for 
-# Lo veo util para debuggear 
-short_gen = (i/2 for i in [1, 2, 3])
+# Ver llaves del diccionario 
+print([i for i in brainrotdic])
 
-print(next(short_gen))
+# Ver valores del diccionario 
+print([i for i in brainrotdic.values()])
 
-print(next(short_gen))
 
-print(next(short_gen))
+print("Data Structures - Sets".center(50,"-"))
+print("="*60)
+print("Similar a una lista, es una estructura donde los elementos \n" \
+" del set NO se repiten, son unicos \n" \
+" Se declara con un par de llaves, al igual que un \n" \
+" diccionario. Salvo que cada llave y valor esta separada por una ,")
+print("="*60)
 
-# Forma de crear una lista con ciclos for
-print([i**2 for i in range(0,10)])
+# Creamos un set 
+# Notese que al correr el código los elementos del set se ordenan
+myset = {1,2,2,10, "Hola", "Mundo", "Tilin", 100, 90.5,500,50}
+print(myset)
+# Podriamos crear tambien un set así
+print([i for i in myset])
 
-out = []
-for i in "Hello. How Are You?":
-    if i.islower():
-        out.append(1 if i == "o" else 0)
-        print(out)
+mynewset = {15,4,3,2,7,10,100,200}
 
-names = ["Angie", "Brian", "Cassie", "David", "Kevin"]
-exam_1_scores = [90, 82, 79, 87, 80]
-exam_2_scores = [95, 84, 72, 91,100, 50]
+# Podemos hacer operaciones con sets tales como:
+print(myset and mynewset)
 
-# Zip Crea una lista donde concatena elementos de x listas dependiendo a la posición de los indices 
-print(list(zip(names, exam_1_scores, exam_2_scores)))
+print(myset - mynewset)
 
+print(myset & mynewset)
+
+print(myset | mynewset)
+
+myset.add(80)
+print(myset.update)
