@@ -46,3 +46,37 @@ name = "Kevin"
 age = 21
 print(f"{name} tiene {age} años")
 
+print("Listas")
+print("-"*30)
+
+# Se pueden crear listas de strings con el metodo list 
+print(list("kevin"))
+
+# Listas
+x = [2, 4, 6, 8, 10]
+y = [2, 4, 6, 8, 10]
+print(f"\nLista inicial {y}")
+
+# Slicing para remplazar elementos del array 
+y[1:4] = [-3, -4, -5]
+print(f"\nLista resultante {y}")
+
+# Cuando se quiere agregar solo un elemento
+y.append(100)
+print(f"\nLista con append {y}")
+
+# Cuando se quieren agregar varios elementos (similar al sum)
+y.extend(["Hello", "World", "c:"])
+print(f"\nLista con extend {y}")
+
+# Devuelve el elemento indicado por el indice 
+print(y.pop(-1))
+
+# .center centra el texto x numeros 
+print("Hello".center(20, "-"))
+
+names = ["Jane", "Adam", "Ryan", "Bob", "Zordon", "Jack", "Jackenzie"]
+# Ordena los elementos por orden alfabetico 
+names.sort()
+print(names)
+
