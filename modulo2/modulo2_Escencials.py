@@ -61,6 +61,9 @@ print(f"\nLista inicial {y}")
 y[1:4] = [-3, -4, -5]
 print(f"\nLista resultante {y}")
 
+y.remove(2)
+print(f"\nLista con elemento removido {y}")
+
 # Cuando se quiere agregar solo un elemento
 y.append(100)
 print(f"\nLista con append {y}")
