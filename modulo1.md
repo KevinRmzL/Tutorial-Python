@@ -7,12 +7,12 @@ Este primer modulo es muy introductorio a Python y Anaconda; así como a las est
 ---
 
 **Libreria Math con varios de sus métodos**
-![alt text](image.png)
+![alt text](anexos/image.png)
 
 **Setence y varios de sus métodos**
-![alt text](image-1.png)
+![alt text](anexos/image-1.png)
 
-## Slicing 
+## Código básico 
 
 ```python
 # Acceder a elementos especificos del string 
