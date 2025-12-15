@@ -1,33 +1,40 @@
-Modos de visualización de archivos usando pickle
-![alt text](anexos/image-2.png)
+Diferrent file visualization
+![alt text](images/image-2.png)
 
-Ejemplo:
+Pickling a Dictionary
+Pickling is the process of serializing Python objects so they can be saved to a file and loaded later.
+
+Example:
 import pickle
 
-* pickling a dictionary - Comprimiendo un diccionario de datos
+1. Pickling a dictionary
 with open("grades.pkl", mode="wb") as opened_file:
     pickle.dump(grades, opened_file)
 
-* Desempaquetando un archivo .pkl
+2. Unpickling a .pkl file
 with open("grades.pkl", mode="rb") as opened_file:
     my_loaded_grades = pickle.load(opened_file)
 
 
-Tambien se pueden guardar arreglos de numpy por si los queremos usar
-en otros archivos 
+Saving and Loading NumPy Arrays
+You can also save NumPy arrays to reuse them in other scripts.
 
-1. import numpy as np
+1. Create a NumPy array:
+import numpy as np
 x = np.array([1, 2, 3])
 
-2. save a numpy array to disk
+
+2. Save a NumPy array to disk:
 np.save("my_array.npy", x)
 
-3. load the saved array from disk
+
+3. Load the saved array from disk:
 y = np.load("my_array.npy")
 
-En caso de tener más arreglos los podemos guardar con:
-`numpy.savez`
 
+Saving Multiple Arrays
+If you have multiple arrays, you can save them together using:
+4. np.savez("multiple_arrays.npz", array1=x, array2=y)
 
 
 

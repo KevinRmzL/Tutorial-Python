@@ -1,24 +1,26 @@
 # python3 -m venv myenv
-# tutorialp/Scripts/activate
+# tutorial-env\Scripts\activate.bat
+
+# python3 -m venv myenv
+# tutorial-env\Scripts\activate.bat
 
 """
-El modulo 5 es un mix de guias de:
+Module 5 is a mix of guides:
 -----------------------------------
-* Buenas práticas de código siguiendo la guia PEP8
-    * Guias de estilo para el códigi 
-* MatplotLib como libreria para la gráficación de datos
-* Importación y exportación de datos usando modulos 
-* Otros paquetes y librerias 
+* Best coding practices following the PEP8 guide
+    * Style guidelines for code
+* Matplotlib as a library for data visualization
+* Importing and exporting data using modules
+* Other packages and libraries
 """
 
 import matplotlib.pyplot as plt
 import numpy as np
 
+# All constants should be written in uppercase and use underscores (_) for spaces
+CIRC_RADIUS : float = 0.2
 
-# Toda constante debe estar estrita en mayusculas y con _ si hay espacios
-CIRC_RADIUS = 0.2
-
-# Una función y clase debe tener minimo una distancia de 2 renglones 
+# A function and a class should have at least two blank lines between them
 
 # Do:
 def func_a():
