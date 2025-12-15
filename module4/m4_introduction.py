@@ -3,6 +3,7 @@
 
 from typing import List
 
+
 class MyGuy:
     x: int = 1 + 2
     y: List[int] = [2, 4, 6]
@@ -11,6 +12,7 @@ class MyGuy:
     @staticmethod
     def f() -> int:  # Static method with return type
         return 3
+
 
 # Access class attributes
 print(MyGuy.x)
@@ -22,6 +24,7 @@ print(hasattr(MyGuy, "z"))
 
 # Get attribute value
 print(getattr(MyGuy, "z"))
+
 
 # Init set the values to each method of the class
 class Person:
@@ -46,9 +49,10 @@ print("Static Methods".center(50, "="))
 """
 The class don´t pass any atributte, the user provide them
 """
+
+
 class Dummy:
     @staticmethod
     def static_func() -> str:
         """Always returns 'hi'."""
-        return 'hi'
-
+        return "hi"

@@ -1,4 +1,4 @@
-print("\nData Structures - Dictionaries\n".center(100,"-"))
+print("\nData Structures - Dictionaries\n".center(100, "-"))
 
 from typing import List, Any, Set, Dict
 
@@ -12,36 +12,44 @@ a pair of {}. Each key and value is separated by :
 
 
 # Dictionary - for key
-items_to_prices : Dict[str, float] = {"cheese": 2.53, "milk": 3.40, "frozen pizza": 8.01}
+items_to_prices: Dict[str, float] = {"cheese": 2.53, "milk": 3.40, "frozen pizza": 8.01}
 print(items_to_prices["frozen pizza"])
 
 # Dictionary - for value
-point_to_region : Dict[float, float] = {(0.1, 2.2, 3):False, (-10., 0, 4.5):True, (4.3, 1.0, 9.5):False}
-print(point_to_region[(-10., 0, 4.5)])
+point_to_region: Dict[float, float] = {
+    (0.1, 2.2, 3): False,
+    (-10.0, 0, 4.5): True,
+    (4.3, 1.0, 9.5): False,
+}
+print(point_to_region[(-10.0, 0, 4.5)])
 
 # Dictionary costructed with loops
-print({k:v for k,v in [("apple", "fruit"), ("carrot", "vegetable")]})
+print({k: v for k, v in [("apple", "fruit"), ("carrot", "vegetable")]})
 
 # At this part of the programming I was falling slept. So, don´t put attention in
-# the names and follow scrolling  
-brainrotdic : Dict[str,str] = {"tralalelotralala" : "god", "Tung tung tung sahur" : "god", "vaca saturno saturnita" : "legendary"}
+# the names and follow scrolling
+brainrotdic: Dict[str, str] = {
+    "tralalelotralala": "god",
+    "Tung tung tung sahur": "god",
+    "vaca saturno saturnita": "legendary",
+}
 print(len(brainrotdic))
 print(brainrotdic["tralalelotralala"])
 brainrotdic["Labubu"] = "mid"
 print(brainrotdic)
 
-# The update function allows us append more elements 
-brainrotdic.update([("Capuchino Asessino", "god"),("Orcalero orcala","mid")])
+# The update function allows us append more elements
+brainrotdic.update([("Capuchino Asessino", "god"), ("Orcalero orcala", "mid")])
 print(brainrotdic)
 
-# See Key  
+# See Key
 print([i for i in brainrotdic])
 
 # See values
 print([i for i in brainrotdic.values()])
 
 
-print("\nData Structures - Sets\n".center(100,"-"))
+print("\nData Structures - Sets\n".center(100, "-"))
 
 
 """
@@ -53,14 +61,13 @@ dictionary. Except that each key and value is separated by a comma.
 """
 
 
-
-# We create a set 
-myset : Set[Any] = {1,2,2,10, "Hello", "World", "Boys", 100, 90.5,500,50}
+# We create a set
+myset: Set[Any] = {1, 2, 2, 10, "Hello", "World", "Boys", 100, 90.5, 500, 50}
 print(myset)
-# Another way to create a set 
+# Another way to create a set
 print([i for i in myset])
 
-mynewset : set[Any] = {15,4,3,2,7,10,100,200}
+mynewset: set[Any] = {15, 4, 3, 2, 7, 10, 100, 200}
 
 """\nIn a set we can make this operations\n"""
 
