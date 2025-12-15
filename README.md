@@ -1,8 +1,9 @@
 ---
-Tutorial-Python
+Python Tutorial - Basics
 ---
 
-Kevin Alejandro Ramírez Luna | 12/12/2025
+>Kevin Alejandro Ramírez Luna | 12/12/2025
+
 A tutorial covering Python's basic concepts. The examples were taken from [this page](https://www.pythonlikeyoumeanit.com/intro.html), highlighting what I found most relevant or tend to forget from the topics presented.
 
 The repository is divided following the next structure:
@@ -12,4 +13,5 @@ The repository is divided following the next structure:
 4. Module 4 - POO
 5. Module 5 - Odds and ends
 6. tutorial-env - Python enviroment 
-7. docstrings and type_hints files 
+
+**Extras: docstrings and type_hints files**
