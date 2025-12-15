@@ -1,36 +1,40 @@
-# Modulo 1
----
+    ---
+    # Module 1
+    ---
 
-Este primer modulo es muy introductorio a Python y Anaconda; así como a las estructuras de datos básicas y sintaxis general. Solo anotaré algunas de las cosas que me parecieron importantes
+    This first module is an introduction to python/Anaconda as a programming language. In this first section we see
+    the basic data structures and type of data.
 
-## Librerias
----
+    With this context, I pretend to have a briebdly and clear introduction to concepts that I dont known and it´s strange.
 
-**Libreria Math con varios de sus métodos**
-![alt text](anexos/image.png)
+    ## Libraries
+    ---
 
-**Setence y varios de sus métodos**
-![alt text](anexos/image-1.png)
+    **Math and his methods**
+    ![alt text](anexos/image.png)
 
-## Código básico 
+    **Setence and his methods **
+    ![alt text](anexos/image-1.png)
 
-```python
-# Acceder a elementos especificos del string 
-sentence = "Who would have thought that we were robots all along?"
-sentence[:4]
-sentence[-6:]
-sentence[5:22]
+    ## Basic Code 
 
-# Validación
-"robot" in sentence
+    ```python
 
-# Cuenta de numeros 
-sentence.count('w')
+    sentence : String= "Who would have thought that we were robots all along?"
+    sentence[:4]
+    sentence[-6:]
+    sentence[5:22]
 
-# Rmplazar elementos
-sentence.replace("robot", "computer")
+    # Validation
+    "robot" in sentence
 
-# Slicing con listas 
-my_list = [10, 20, 30, 40, 50, 60]
-my_list[:3] = "abc"
-```
+    # Num counter 
+    sentence.count('w')
+
+    # Remplace strings 
+    sentence.replace("robot", "computer")
+
+    # Slicing 
+    my_list = [10, 20, 30, 40, 50, 60]
+    my_list[:3] = "abc"
+

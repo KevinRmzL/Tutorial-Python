@@ -1,11 +1,11 @@
-from typing import List, Iterable, Any
-
 """
 This module consist in 4 different problems to practice:
 * Dictionaries
 * Slicing 
 * Data Structures 
 """
+from typing import List, Iterable, Any
+
 
 print("Problem 1 - Dictionary Merge".center(50,"="))
 

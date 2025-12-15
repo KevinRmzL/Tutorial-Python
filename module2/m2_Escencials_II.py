@@ -67,9 +67,9 @@ for i in "Hello. How Are You?":
         out.append(1 if i == "o" else 0)
         print(out)
 
-names = ["Angie", "Brian", "Cassie", "David", "Kevin"]
-exam_1_scores = [90, 82, 79, 87, 80]
-exam_2_scores = [95, 84, 72, 91,100, 50]
+names : List[str] = ["Angie", "Brian", "Cassie", "David", "Kevin"]
+exam_1_scores : List[int] = [90, 82, 79, 87, 80]
+exam_2_scores : List[int] = [95, 84, 72, 91,100, 50]
 
 # Zip Crea una lista donde concatena elementos de x listas dependiendo a la posición de los indices 
 print(list(zip(names, exam_1_scores, exam_2_scores)))
