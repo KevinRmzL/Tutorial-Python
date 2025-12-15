@@ -1,32 +1,39 @@
-print("Tuplas".center(20,"-"))
-# A diferencia de una lista, esta NO se puede cambiar 
-y = [1,2,3,4]
-x = tuple(y)
+"""
+In this code we´re to introduce more concepts of the list as a 
+datastrure. Addicionally, we´re going to introduce a new structure: A tuple
+"""
+from typing import List, Optional, Iterator
+
+
+print("\nTuple\n".center(50,"-"))
+# In contrast to a List, a tuple CANNOT change
+y : tuple[int] = (1,2,3,4)
+x : tuple[int]= tuple(y)
 print(x,y)
 
-# El metodo count cuenta numeros o caracteres
-text = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que viva un hidalgo de los de lanza en astillero, adarga antigua, rocn flaco y galgo corredor"
+# The count method counts numbers or characters
+text : str = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que viva un hidalgo de los de lanza en astillero, adarga antigua, rocn flaco y galgo corredor"
 print(text.count("e"))
 
-# Slicing en texto
-#       inicio|fin
+# Text Slicing
+#       begging|end
 print(text[0:41])
-#    inicio|fin|step
+#       begging|end
 print(text[0:41:2])
 
 print(text[:])
 
-# Recorre todo el texto en saltos de 2
+# Move the text in 2 units (jumps/steps)
 print(text[::2])
 
-# Recorre todo el texto en saltos de 2 de atras hacia adelante 
+# Move the text in 2 units (jumps/steps) beggining at the end
 print(text[::-2])
 
-first_item = None
+first_item : Optional[int] = None
 
-print("Operadores".center(20,"-"))
-y = [1,2,3,4,5,6]
-x = [1,2,3,4,5,6]
+print("\nOperadores\n".center(50,"-"))
+y : list[int] = [1,2,3,4,5,6]
+x : list[int] = [1,2,3,4,5,6]
 print(5 in y)
 
 print(x is y)
@@ -35,11 +42,15 @@ print(x == y)
 
 
 
-print("Bucle For".center(20, "-"))
+print("\nFor Loop\n".center(20, "-"))
 
-# Una forma chistosa para ir iterando puede ser con next. Que te permite hacer "peticiones" al ciclo for 
-# Lo veo util para debuggear 
-short_gen = (i/2 for i in [1, 2, 3])
+"""
+Another funny way to iterate is with next.
+it allows you to create "request" in a for loop 
+I think that is usesfull for debbuing
+"""
+
+short_gen : Iterator[float] = (i/2 for i in [1, 2, 3])
 
 print(next(short_gen))
 
