@@ -1,36 +1,39 @@
 # python3 -m venv myenv
-# tutorialp/Scripts/activate
+# tutorial-env\Scripts\activate.bat
+
+from typing import List
 
 class MyGuy:
-    x = 1 + 2
-    y = [2, 4, 6]
-    z = "hi"
+    x: int = 1 + 2
+    y: List[int] = [2, 4, 6]
+    z: str = "hi"
 
-    def f():
+    @staticmethod
+    def f() -> int:  # Static method with return type
         return 3
 
-# Llamamos a cada uno de los atributos creados   
+# Access class attributes
 print(MyGuy.x)
 print(MyGuy.y)
 print(MyGuy.z)
 
-# Con hasttr se puede comprobar si existe el metodo denotado en las ""
+# Check if attribute exists (the method need to be behind "")
 print(hasattr(MyGuy, "z"))
 
-# Con getattr se visualiza el contenido de un metodo 
+# Get attribute value
 print(getattr(MyGuy, "z"))
 
-# Init asigna valores base a los metodos de la clase  
+# Init set the values to each method of the class
 class Person:
-    x = 1  # this sets a class-level attribute, common to all instances of `Person`
+    x: int = 1  # Class-level attribute
 
-    def __init__(self, name):
-        """ This method is executed every time we create a new `Person` instance.
-            `self` is the object instance being created."""
-        self.name = name   # set the attribute `name` to the Person-instance `self`
+    def __init__(self, name: str) -> None:
+        """Executed when creating a new Person instance."""
+        self.name: str = name
 
         # __init__ cannot not return any value other than `None`. Its sole purpose is to affect
         # `self`, the instance of `Person` that is being created
+
 
 list_of_people = [Person(n) for n in ("Fermi", "Noether", "Euler")]
 
@@ -38,16 +41,14 @@ for person in list_of_people:
     print(person.name)
     print(person.x)
 
-print("Static Methods".center(50,"="))
-# La clase no pasa ningun argumento al metodo, todo lo especifica el usuario. Por eso no usa el self
+print("Static Methods".center(50, "="))
+
+"""
+The class don´t pass any atributte, the user provide them
+"""
 class Dummy:
-
     @staticmethod
-    def static_func():
-        """ A static method defined to always returns
-            the string `'hi'`"""
+    def static_func() -> str:
+        """Always returns 'hi'."""
         return 'hi'
-
-
-print(Dummy.static_func())
 

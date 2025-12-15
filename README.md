@@ -12,4 +12,4 @@ The repository is divided following the next structure:
 4. Module 4 - POO
 5. Module 5 - Odds and ends
 6. tutorial-env - Python enviroment 
-7 docstrings and type_hints files 
+7. docstrings and type_hints files 

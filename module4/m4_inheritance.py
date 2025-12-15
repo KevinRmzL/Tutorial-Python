@@ -1,34 +1,33 @@
+# python3 -m venv myenv
+# tutorial-env\Scripts\activate.bat
+
+from typing import Tuple
+
 """
-Ejemplo de herencia para crear un cuadrado. 
+Example of inheritance to create a square.
 """
 
 class Rectangle:
-    """ A class of Python object that describes the properties of a rectangle"""
-    def __init__(self, width, height, center=(0, 0)):
-        self.width = width
-        self.height = height
-        self.center = center
+    """A class that describes the properties of a rectangle."""
+    def __init__(self, width: int, height: int, center: Tuple[int, int] = (0, 0)) -> None:
+        self.width: int = width
+        self.height: int = height
+        self.center: Tuple[int, int] = center
 
-    def __repr__(self):
-        return "Rectangle(width={w}, height={h}, center={c})".format(h=self.height,
-                                                                     w=self.width,
-                                                                     c=self.center)
+    def __repr__(self) -> str:
+        return f"Rectangle(width={self.width}, height={self.height}, center={self.center})"
 
-    def compute_area(self):
+    def compute_area(self) -> int:
         return self.width * self.height
 
 
 class Square(Rectangle):
-    def __init__(self, side, center=(0, 0)):
-        # equivalent to `Rectangle.__init__(self, side, side, center)`
+    def __init__(self, side: int, center: Tuple[int, int] = (0, 0)) -> None:
         super().__init__(side, side, center)
 
-# Notese que se reciclan los metodos usados para el rectangulo
+
+# Example usage
 my_square = Square(2)
 print(my_square.compute_area())
 
-# Funciones que no conocia 
-
-# Indica que una clase derivada es subclase de una clase padre
-print(issubclass(Square, Rectangle))
-
+# Check inheritance

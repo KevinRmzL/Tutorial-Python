@@ -1,7 +1,8 @@
-# Ejemplos de clases y métodos
+# Example of classes and metothds
+from typing import List, Iterable
 
 class ShoppingList:
-    def __init__(self, items):
+    def __init__(self, items : str | Iterable[str]) -> None:
         """ Parameters
             ----------
             items : Union[str, Iterable[str]]
@@ -11,46 +12,48 @@ class ShoppingList:
         self._needed = set(items)
         self._purchased = set()
 
-    def add_new_items(self, items):
+    def add_new_items(self, items : str | Iterable[str]) -> None:
         """ Add more items to the shopping list
 
             Parameters
             ----------
             items : Union[str, Iterable[str]]
                 Iterable of item-names to add to shopping list"""
+       
         if isinstance(items, str):
-            items = [items]
+            items : List = [items]
         # set.update adds elements of an iterable to a set
         self._needed.update(items)
 
-    def mark_purchased_items(self, items):
+
+    def mark_purchased_items(self, items : str | Iterable[str]) -> None:
         """ Provide names of items to mark as 'purchased'
 
             Parameters
             ----------
             items : Union[str, Iterable[str]]"""
         if isinstance(items, str):
-            items = [items]
+            items : List = [items]
         # only mark items as purchased that are on our list to begin with
         self._purchased.update(set(items) & self._needed)
         # remove all purchased items from our unpurchased set
         self._needed.difference_update(self._purchased)
 
-    def list_purchased_items(self):
+    def list_purchased_items(self) -> List[str]:
         """ Return a sorted list of the items that have been purchased"""
         return sorted(self._purchased)
 
-    def list_unpurchased_items(self):
+    def list_unpurchased_items(self) -> List[str]:
         """ Return a sorted list of the items still on the list"""
         return sorted(self._needed)
 
-my_list = ShoppingList(["apples", "apples", "grapes", "peaches", "milk", "bread", "pineapples"])
-print("Items sin comprar: ",my_list.list_unpurchased_items())
+my_list : List[str] = ShoppingList(["apples", "apples", "grapes", "peaches", "milk", "bread", "pineapples"])
+print("Unpurchased items: ", my_list.list_unpurchased_items())
 
 my_list.mark_purchased_items(["grapes", "pineapples"])
-print("Items comprados: ",my_list.list_purchased_items())
+print("Bougth items: ", my_list.list_purchased_items())
 
-print("Sin comprar todavía: ",my_list.list_unpurchased_items())
+print("Missing items:", my_list.list_unpurchased_items())
 
 def strike(text):
     """ Renders string with strike-through characters through it.
@@ -66,16 +69,16 @@ def strike(text):
 print("="*50)
 
 """
-Aparte del constructor __init__ existen muchos más como:
+Exist another costructers beside __init__ like:
 * __repr__(self)
 * __str__(self)
 
-La documentación de los constructores la podemos ver en:
+The documentation with more detail is bellow:
 https://www.pythonlikeyoumeanit.com/Module4_OOP/Special_Methods.html
 """
 class ShoppingList2:
     def __init__(self, items):
-        self._needed = set(items)
+        self._needed : set = set(items)
         self._purchased = set()
 
     def __repr__(self):
@@ -99,7 +102,7 @@ class ShoppingList2:
         self._purchased.update(set(items) & self._needed)
         self._needed.difference_update(self._purchased)
 
-mynewlist = ShoppingList2(["grapes", "beets", "apples", "milk", "melon", "coffee"])
+mynewlist : List[str] = ShoppingList2(["grapes", "beets", "apples", "milk", "melon", "coffee"])
 mynewlist.mark_purchased_items(["grapes", "beets", "milk"])
 
-print(mynewlist)
+print("My new wish list: ", mynewlist)
