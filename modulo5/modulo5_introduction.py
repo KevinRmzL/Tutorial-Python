@@ -2,10 +2,15 @@
 # tutorialp/Scripts/activate
 
 """
-El modulo 5 es más de guias para las buenas práticas de código siguiendo la guia
-PEP8; adicional, se menciona un poco de MatplotLib como libreria para la gráficación de datos
-
+El modulo 5 es un mix de guias de:
+-----------------------------------
+* Buenas práticas de código siguiendo la guia PEP8
+    * Guias de estilo para el códigi 
+* MatplotLib como libreria para la gráficación de datos
+* Importación y exportación de datos usando modulos 
+* Otros paquetes y librerias 
 """
+
 import matplotlib.pyplot as plt
 import numpy as np
 
